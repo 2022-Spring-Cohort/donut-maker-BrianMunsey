@@ -40,6 +40,7 @@ img:active {
 }
 
 body{
+  height:100%;
   background-image: url("/trialbackground2.jpg");
   background-repeat: no-repeat;
   background-size:100% 100%;
@@ -52,6 +53,17 @@ section{
   margin-bottom: auto;
   height:100px;
   justify-content: space-around;
-  padding:10px;
   align-content: center;
+}
+
+.resetButton{
+  display:flex;
+  position: absolute;
+  bottom:0px;
+  margin: 0px auto;
+  width:99%;
+}
+
+.button{
+  margin:0 auto;
 }

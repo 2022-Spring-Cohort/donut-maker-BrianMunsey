@@ -7,6 +7,8 @@ const doughNutThing = new doughNuts();
 
 let moreStuff = false;
 
+let clear;
+
 function moreDoughNuts() {
   doughNutThing.click();
   setInterval(updateValues(doughNutThing), 1000);
@@ -57,9 +59,10 @@ collapsibleEl3.addEventListener("click", () => {
 
 const doughNutBtn = document.querySelector(".doughNutButton");
 doughNutBtn.addEventListener("click", () => {
-  doughNutThing.click();
+  moreDoughNuts();
   updateValues(doughNutThing);
 });
+
 
 const autoClickerBtn = document.querySelector(".buyClicker");
 autoClickerBtn.innerText = "Auto Clicker Price: " + doughNutThing.price.toFixed(2);
@@ -67,7 +70,8 @@ autoClickerBtn.addEventListener("click", () => {
   if (doughNutThing.dCount >= doughNutThing.price) {
     doughNutThing.dCount -= doughNutThing.price;
     doughNutThing.priceChange();
-    setInterval(moreDoughNuts, 1000);
+    clear = setInterval(moreDoughNuts, 1000);
+    doughNutThing.autoClickers++;
   }
   updateValues(doughNutThing);
 });
@@ -82,20 +86,33 @@ clickMultEl.addEventListener("click", () => {
   updateValues(doughNutThing);
 })
 
+const resetButtonEl = document.querySelector(".resetButton");
+
+resetButtonEl.addEventListener("click",() => {
+  for (let i=0; i<doughNutThing.autoClickers; i++) {
+    window.clearInterval(i);
+    clearInterval(clear);
+  }
+    doughNutThing.dCount = 0;
+    doughNutThing.clickWorth = 1;
+    doughNutThing.price = 100;
+    doughNutThing.multiplierPrice = 10;
+    doughNutThing.autoClickers = 0;
+    updateValues(doughNutThing);
+})
+
 const updateValues = function (doughNutThing) {
   dCountEl.innerText = "Doughnuts: " + doughNutThing.dCount.toFixed(2);
   autoClickerBtn.innerText = "Auto Clicker Price: " + doughNutThing.price.toFixed(2);
   clickMultEl.innerText = "Multiplier Price: " + doughNutThing.multiplierPrice.toFixed(2);
   clickMultDisplay.innerText = "Click Worth: " + doughNutThing.clickWorth.toFixed(2);
-
 }
 
-let gameEl = document.querySelector(".game");
-
-let dCountEl = document.createElement("p");
+let dCountEl = document.createElement("h1");
 dCountEl.innerText = "Doughnuts: " + doughNutThing.dCount.toFixed(2);
 doughNutBtn.appendChild(dCountEl);
 
-let clickMultDisplay = document.createElement("p");
+let clickMultDisplay = document.createElement("h1");
 clickMultDisplay.innerText = "Click Worth: " + doughNutThing.clickWorth.toFixed(2);
 doughNutBtn.appendChild(clickMultDisplay);
+

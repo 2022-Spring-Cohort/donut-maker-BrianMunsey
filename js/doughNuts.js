@@ -1,9 +1,10 @@
 class doughNuts {
     constructor() {
-        this.dCount = 0;
+        this.dCount = 1000;
         this.clickWorth = 1;
         this.price = 100;
         this.multiplierPrice = 10;
+        this.autoClickers = 0;
     }
 
     click() {
@@ -21,7 +22,6 @@ class doughNuts {
             this.multiplierPrice *= 1.1;
         }
     }
-
 }
 
 export { doughNuts }
