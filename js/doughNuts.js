@@ -1,6 +1,6 @@
 class doughNuts {
     constructor() {
-        this.dCount = 100;
+        this.dCount = 0;
         this.clickWorth = 1;
         this.price = 100;
         this.multiplierPrice = 10;

@@ -1,5 +1,5 @@
- /* Style the button that is used to open and close the collapsible content */
- .collapsible, .collapsible2, .collapsible3 {
+/* Style the button that is used to open and close the collapsible content */
+.collapsible, .collapsible2, .collapsible3 {
     background-color: #eee;
     color: #444;
     cursor: pointer;
@@ -11,20 +11,20 @@
     font-size: 15px;
   }
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .collapsible:hover, .collapsible2:hover, .collapsible3:hover {
+/* Add a background color to the button if it is clicked on */
+.active, .collapsible:hover, .collapsible2:hover, .collapsible3:hover {
     background-color: #ccc;
   }
   
-  /* Style the collapsible content. Note: hidden by default */
-  .content, .content2, .content3 {
+/* Style the collapsible content. Note: hidden by default */
+.content, .content2, .content3 {
     padding: 0 18px;
     overflow: hidden;
     text-align: center;
     background-color: #f1f1f1;
   } 
 
-  .hidden{
+.hidden{
     display:none;
     width:fit-content;
   }
@@ -42,7 +42,7 @@ img:active {
 body{
   background-image: url("trialbackground2.jpg");
   background-repeat: no-repeat;
-  background-size:contain;
+  background-size:100% 100%;
   background-attachment: fixed;
 }
 
@@ -54,6 +54,7 @@ section{
   justify-content: space-around;
   padding:10px;
   align-content: center;
+  align-self: center;
 }
 
 

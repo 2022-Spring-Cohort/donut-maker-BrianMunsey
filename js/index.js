@@ -61,14 +61,6 @@ doughNutBtn.addEventListener("click", () => {
   updateValues(doughNutThing);
 });
 
-//might not need this at all but saving it just incase
-// const doughNut = document.querySelector(".image");
-// doughNut.addEventListener("click", () => {
-//     doughNut.style.transform = "scale(.9)";
-//     doughNut.style.transition = "transform 0.25s ease";
-    
-// });
-
 const autoClickerBtn = document.querySelector(".buyClicker");
 autoClickerBtn.innerText = "Auto Clicker Price: " + doughNutThing.price.toFixed(2);
 autoClickerBtn.addEventListener("click", () => {
