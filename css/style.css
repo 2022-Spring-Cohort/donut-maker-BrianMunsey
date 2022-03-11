@@ -40,7 +40,7 @@ img:active {
 }
 
 body{
-  background-image: url("trialbackground2.jpg");
+  background-image: url("/trialbackground2.jpg");
   background-repeat: no-repeat;
   background-size:100% 100%;
   background-attachment: fixed;
@@ -54,22 +54,4 @@ section{
   justify-content: space-around;
   padding:10px;
   align-content: center;
-  align-self: center;
 }
-
-
-
-/* section{
-  margin-top: 400px;
-  display:grid;
-  grid-template-columns: 50% 50%;
-  padding:10px;
-} */
-
-/* .buyClicker{
-  display:flex;
-  flex-direction:column;
-  font-size: xx-large;
-  justify-content: center;
-  background-color: transparent;
-} */

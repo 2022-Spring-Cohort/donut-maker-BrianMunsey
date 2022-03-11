@@ -12,21 +12,21 @@ function moreDoughNuts() {
   setInterval(updateValues(doughNutThing), 1000);
 }
 
-function showStuff() {
+function showContent() {
   showHiddenInfo.classList.toggle("hidden");
   if (moreStuff) {
     moreStuff = true;
   }
 }
 
-function showStuff2() {
+function showContent2() {
   showHiddenInfo2.classList.toggle("hidden");
   if (moreStuff) {
     moreStuff = true;
   }
 }
 
-function showStuff3() {
+function showContent3() {
   showHiddenInfo3.classList.toggle("hidden");
   if (moreStuff) {
     moreStuff = true;
@@ -44,15 +44,15 @@ showHiddenInfo.classList.add("hidden");
 showHiddenInfo2.classList.add("hidden");
 showHiddenInfo3.classList.add("hidden");
 collapsibleEl.addEventListener("click", () => {
-  showStuff();
+  showContent();
 })
 
 collapsibleEl2.addEventListener("click", () => {
-  showStuff2();
+  showContent2();
 })
 
 collapsibleEl3.addEventListener("click", () => {
-  showStuff3();
+  showContent3();
 })
 
 const doughNutBtn = document.querySelector(".doughNutButton");
