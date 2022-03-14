@@ -1,0 +1,69 @@
+/* Style the button that is used to open and close the collapsible content */
+.collapsible, .collapsible2, .collapsible3 {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 33%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+  }
+  
+/* Add a background color to the button if it is clicked on */
+.active, .collapsible:hover, .collapsible2:hover, .collapsible3:hover {
+    background-color: #ccc;
+  }
+  
+/* Style the collapsible content. Note: hidden by default */
+.content, .content2, .content3 {
+    padding: 0 18px;
+    overflow: hidden;
+    text-align: center;
+    background-color: #f1f1f1;
+  } 
+
+.hidden{
+    display:none;
+    width:fit-content;
+  }
+
+img{
+  height: 200px;
+  width: 200px;
+}
+
+img:active {
+  transform: scale(.95);
+  transition:  0.05s ease;
+}
+
+body{
+  height:100%;
+  background-image: url("/trialbackground2.jpg");
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  background-attachment: fixed;
+}
+
+section{
+  display:flex;
+  margin-top: 200px;
+  margin-bottom: auto;
+  height:100px;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.resetButton{
+  display:flex;
+  position: absolute;
+  bottom:0px;
+  margin: 0px auto;
+  width:99%;
+}
+
+.button{
+  margin:0 auto;
+}
